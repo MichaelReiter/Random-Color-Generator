@@ -6,22 +6,30 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FE9F31D1-FC86-4A42-A72A-F01E892FADF5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Random Color</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>2713E438F3E60B420D2DA7AE84492512DD51EAB4</key>
+		<string>https://github.com/MichaelReiter/Random-Color-Generator</string>
 		<key>68487D6D3A9F2E1F21B224E22C3A6E4D7664164E</key>
 		<string>https://github.com/MichaelReiter/Phone-Finder</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Random Color.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>2713E438F3E60B420D2DA7AE84492512DD51EAB4</key>
+		<string>../..</string>
 		<key>68487D6D3A9F2E1F21B224E22C3A6E4D7664164E</key>
-		<string>Phone%20Finder/</string>
+		<string>../../../Phone%20Finder</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/MichaelReiter/Phone-Finder</string>
+	<string>https://github.com/MichaelReiter/Random-Color-Generator</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>68487D6D3A9F2E1F21B224E22C3A6E4D7664164E</string>
+	<string>2713E438F3E60B420D2DA7AE84492512DD51EAB4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -31,6 +39,14 @@
 			<string>68487D6D3A9F2E1F21B224E22C3A6E4D7664164E</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Phone%20Finder</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2713E438F3E60B420D2DA7AE84492512DD51EAB4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Random%20Color</string>
 		</dict>
 	</array>
 </dict>
