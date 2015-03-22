@@ -10,25 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var colorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.buttonPressed(nil)
         
         let labelHeight: CGFloat = 100
-        let label = UILabel(frame: CGRectMake(0, 0, self.view.frame.size.width, labelHeight))
-        label.textAlignment = .Center
-        label.textColor = UIColor.whiteColor()
-        label.backgroundColor = UIColor.clearColor()
-        label.text = "COLOR"
-        label.font = UIFont(name: "Avenir", size: 50)
-        label.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/3 - labelHeight/2)
-        self.view.addSubview(label)
+        self.colorLabel.frame = CGRectMake(0, 0, self.view.frame.size.width, labelHeight)
+        self.colorLabel.textAlignment = .Center
+        self.colorLabel.textColor = UIColor.whiteColor()
+        self.colorLabel.backgroundColor = UIColor.clearColor()
+        self.colorLabel.font = UIFont(name: "Avenir", size: 50)
+        self.colorLabel.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/3 - labelHeight/2)
+        self.view.addSubview(colorLabel!)
         
         let buttonWidth: CGFloat = 120
         let buttonHeight: CGFloat = buttonWidth/2
 
-        let button = MyButton(frame: CGRectMake(self.view.frame.size.width/2 - buttonWidth/2, self.view.frame.size.height/3*2 - buttonHeight/2, buttonWidth, buttonHeight))
+        let button = MyButton(frame: CGRectMake(self.view.frame.size.width/2 - buttonWidth/2, self.view.frame.size.height/4*3 - buttonHeight/2, buttonWidth, buttonHeight))
         button.titleLabel?.font = UIFont(name: "Avenir", size: buttonHeight/3)
         button.setTitle("RANDOM", forState: .Normal)
         button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
@@ -44,20 +45,19 @@ class ViewController: UIViewController {
         return UIStatusBarStyle.LightContent
     }
     
-    @IBAction func buttonPressed(sender: UIButton!) {
-    
-        let redHexValue = String(arc4random_uniform(255), radix: 16, uppercase: true)
-        let greenHexValue = String(arc4random_uniform(255), radix: 16, uppercase: true)
-        let blueHexValue = String(arc4random_uniform(255), radix: 16, uppercase: true)
-        let hexString = "#" + redHexValue + greenHexValue + blueHexValue
-        NSLog("%@", hexString)
+    func buttonPressed(sender: UIButton!) {
         
+        let redInt = arc4random_uniform(255)
+        let greenInt = arc4random_uniform(255)
+        let blueInt = arc4random_uniform(255)
         
-        let red = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-        let green = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-        let blue = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        let redHexValue = NSString(format:"%2X", redInt) as String
+        let greenHexValue = NSString(format:"%2X", greenInt) as String
+        let blueHexValue = NSString(format:"%2X", blueInt) as String
+
+        self.view.backgroundColor = UIColor(red: CGFloat(redInt)/255, green: CGFloat(greenInt)/255, blue: CGFloat(blueInt)/255, alpha: 1)
         
-        self.view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        self.colorLabel.text = "#" + redHexValue + greenHexValue + blueHexValue
     }
 }
 
