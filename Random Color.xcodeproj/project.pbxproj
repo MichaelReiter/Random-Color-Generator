@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2E28FA1AB8C44400E6EFF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E28F91AB8C44400E6EFF4 /* ViewController.swift */; };
 		4CD9D2F31AB7D7F9003B2BB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9D2F21AB7D7F9003B2BB1 /* AppDelegate.swift */; };
 		4CD9D2F81AB7D7F9003B2BB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD9D2F61AB7D7F9003B2BB1 /* Main.storyboard */; };
 		4CD9D2FA1AB7D7F9003B2BB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD9D2F91AB7D7F9003B2BB1 /* Images.xcassets */; };
 		4CD9D2FD1AB7D7F9003B2BB1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD9D2FB1AB7D7F9003B2BB1 /* LaunchScreen.xib */; };
 		4CD9D3091AB7D7F9003B2BB1 /* Random_ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9D3081AB7D7F9003B2BB1 /* Random_ColorTests.swift */; };
-		4CD9D3131AB7D80B003B2BB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9D3121AB7D80B003B2BB1 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C2E28F91AB8C44400E6EFF4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4CD9D2ED1AB7D7F9003B2BB1 /* Random Color.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random Color.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD9D2F11AB7D7F9003B2BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD9D2F21AB7D7F9003B2BB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		4CD9D3021AB7D7F9003B2BB1 /* Random ColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Random ColorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD9D3071AB7D7F9003B2BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD9D3081AB7D7F9003B2BB1 /* Random_ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_ColorTests.swift; sourceTree = "<group>"; };
-		4CD9D3121AB7D80B003B2BB1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../Phone Finder/Phone Finder/ViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				4CD9D2F21AB7D7F9003B2BB1 /* AppDelegate.swift */,
-				4CD9D3121AB7D80B003B2BB1 /* ViewController.swift */,
+				4C2E28F91AB8C44400E6EFF4 /* ViewController.swift */,
 				4CD9D2F61AB7D7F9003B2BB1 /* Main.storyboard */,
 				4CD9D2F91AB7D7F9003B2BB1 /* Images.xcassets */,
 				4CD9D2FB1AB7D7F9003B2BB1 /* LaunchScreen.xib */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD9D3131AB7D80B003B2BB1 /* ViewController.swift in Sources */,
+				4C2E28FA1AB8C44400E6EFF4 /* ViewController.swift in Sources */,
 				4CD9D2F31AB7D7F9003B2BB1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +407,7 @@
 				4CD9D30E1AB7D7F9003B2BB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CD9D30F1AB7D7F9003B2BB1 /* Build configuration list for PBXNativeTarget "Random ColorTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +416,7 @@
 				4CD9D3111AB7D7F9003B2BB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

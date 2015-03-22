@@ -15,8 +15,6 @@ class ViewController: UIViewController {
         
         self.buttonPressed(nil)
         
-        //self.view.backgroundColor = UIColor(hue: 0, saturation: 0.7, brightness: 0.9, alpha: 1) //flat red
-        
         let labelHeight: CGFloat = 100
         let label = UILabel(frame: CGRectMake(0, 0, self.view.frame.size.width, labelHeight))
         label.textAlignment = .Center
@@ -40,22 +38,25 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(button)
-        
     }
 
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
     
-    func buttonPressed(sender: UIButton!) {
+    @IBAction func buttonPressed(sender: UIButton!) {
+    
+        let redHexValue = String(arc4random_uniform(255), radix: 16, uppercase: true)
+        let greenHexValue = String(arc4random_uniform(255), radix: 16, uppercase: true)
+        let blueHexValue = String(arc4random_uniform(255), radix: 16, uppercase: true)
+        let hexString = "#" + redHexValue + greenHexValue + blueHexValue
+        NSLog("%@", hexString)
+        
+        
         let red = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
         let green = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
         let blue = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-        let redHex = String(Int(Float(red) * 100), radix: 16)
-        let greenHex = String(Int(Float(green) * 100), radix: 16)
-        let blueHex = String(Int(Float(blue) * 100), radix: 16)
-        let hexString = "#" + redHex + greenHex + blueHex
-        NSLog("%@", hexString)
+        
         self.view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
     }
 }
