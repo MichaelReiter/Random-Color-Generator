@@ -51,9 +51,18 @@ class ViewController: UIViewController {
         let greenInt = arc4random_uniform(255)
         let blueInt = arc4random_uniform(255)
         
-        let redHexValue = NSString(format:"%2X", redInt) as String
-        let greenHexValue = NSString(format:"%2X", greenInt) as String
-        let blueHexValue = NSString(format:"%2X", blueInt) as String
+        var redHexValue = NSString(format:"%2X", redInt) as String
+        var greenHexValue = NSString(format:"%2X", greenInt) as String
+        var blueHexValue = NSString(format:"%2X", blueInt) as String
+        if (redInt >= 0 && redInt <= 15) {
+            redHexValue = "0" + dropFirst(redHexValue)
+        }
+        if (greenInt >= 0 && greenInt <= 15) {
+            greenHexValue = "0" + dropFirst(greenHexValue)
+        }
+        if (blueInt >= 0 && blueInt <= 15) {
+            blueHexValue = "0" + dropFirst(blueHexValue)
+        }
 
         self.view.backgroundColor = UIColor(red: CGFloat(redInt)/255, green: CGFloat(greenInt)/255, blue: CGFloat(blueInt)/255, alpha: 1)
         
