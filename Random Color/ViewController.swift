@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         self.buttonPressed(nil)
         
-        colorLabel.frame = CGRectMake(0, 0, self.view.frame.size.width/2, 100)
+        colorLabel.frame = CGRectMake(0, self.view.frame.size.height/8, self.view.frame.size.width/2, 100)
         colorLabel.textAlignment = .Center
         colorLabel.textColor = UIColor.whiteColor()
         colorLabel.backgroundColor = UIColor.clearColor()
@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: "Avenir", size: buttonHeight/3)
         button.setTitle("RANDOM", forState: .Normal)
         button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.whiteColor().CGColor
         button.layer.cornerRadius = 10
