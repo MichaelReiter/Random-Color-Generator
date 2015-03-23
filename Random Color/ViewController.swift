@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Phone Finder
+//  Random Color Picker
 //
 //  Created by Michael Reiter on 2015-03-10.
 //  Copyright (c) 2015 Michael Reiter. All rights reserved.
@@ -17,13 +17,12 @@ class ViewController: UIViewController {
         
         self.buttonPressed(nil)
         
-        let labelHeight: CGFloat = 100
-        self.colorLabel.frame = CGRectMake(0, 0, self.view.frame.size.width, labelHeight)
-        self.colorLabel.textAlignment = .Center
-        self.colorLabel.textColor = UIColor.whiteColor()
-        self.colorLabel.backgroundColor = UIColor.clearColor()
-        self.colorLabel.font = UIFont(name: "Avenir", size: 50)
-        self.colorLabel.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/3 - labelHeight/2)
+        colorLabel.frame = CGRectMake(0, 0, self.view.frame.size.width/2, 100)
+        colorLabel.textAlignment = .Center
+        colorLabel.textColor = UIColor.whiteColor()
+        colorLabel.backgroundColor = UIColor.clearColor()
+        colorLabel.font = UIFont(name: "Avenir", size: 50)
+        colorLabel.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height)
         self.view.addSubview(colorLabel!)
         
         let buttonWidth: CGFloat = 120
