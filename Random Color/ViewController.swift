@@ -17,16 +17,30 @@ class ViewController: UIViewController {
         
         self.buttonPressed(nil)
         
+        var buttonWidth: CGFloat = 120
+        var fontSize: CGFloat = 50
+        if (self.view.frame.size.width < 330) {          //iPhone 4S, 5, 5S
+            fontSize = 50
+            buttonWidth = 120
+        } else if (self.view.frame.size.width < 380) {   //iPhone 6
+            fontSize = 55
+            buttonWidth = 135
+        } else if (self.view.frame.size.width < 420) {   //iPhone 6 Plus
+            fontSize = 60
+            buttonWidth = 150
+        } else {                                         //iPad
+            fontSize = 90
+            buttonWidth = 200
+        }
+        let buttonHeight: CGFloat = buttonWidth/2
+        
         colorLabel.frame = CGRectMake(0, self.view.frame.size.height/8, self.view.frame.size.width/2, 100)
         colorLabel.textAlignment = .Center
         colorLabel.textColor = UIColor.whiteColor()
         colorLabel.backgroundColor = UIColor.clearColor()
-        colorLabel.font = UIFont(name: "Avenir", size: 50)
+        colorLabel.font = UIFont(name: "Avenir", size: fontSize)
         colorLabel.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height)
         self.view.addSubview(colorLabel!)
-        
-        let buttonWidth: CGFloat = 120
-        let buttonHeight: CGFloat = buttonWidth/2
 
         let button = MyButton(frame: CGRectMake(self.view.frame.size.width/2 - buttonWidth/2, self.view.frame.size.height/4*3 - buttonHeight/2, buttonWidth, buttonHeight))
         button.titleLabel?.font = UIFont(name: "Avenir", size: buttonHeight/3)
